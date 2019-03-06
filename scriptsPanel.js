@@ -88,3 +88,6 @@ function funcionNavTab3(){
     document.getElementById("navTab3").classList.add('active');
     document.getElementById("historialTicketsProfesional").classList.add('active'); 
 }
+
+//boton editar
+
