@@ -18,6 +18,7 @@ function seccionDnoneAll() {
     document.getElementById("seccionConsultorios").classList.add('d-none');
     document.getElementById("seccionAlquileres").classList.add('d-none');
     document.getElementById("seccionDeudas").classList.add('d-none');
+    document.getElementById("botonSumarProf").classList.add('d-none');
 }
 
 function funcionLinkTicketsPublicos() {
@@ -39,6 +40,8 @@ function funcionLinkProfesionales() {
     seccionDnoneAll();
     document.getElementById("linkProfesionales").classList.add('active');
     document.getElementById("seccionProfesionales").classList.remove('d-none');
+    document.getElementById("botonSumarProf").classList.remove('d-none');
+
 }
 
 function funcionLinkConsultorios() {
