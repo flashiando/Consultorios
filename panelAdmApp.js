@@ -19,7 +19,6 @@ var inicioS = function () {
         return element.id == localStorage.getItem('id');        
     });
     document.getElementById("Administrativo").innerHTML = "Panel de control de " + adminLogueado.nombre;
-    alert('Hola')
-}
+    }
 
 window.onload = inicioS();
