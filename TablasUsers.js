@@ -20,10 +20,12 @@ var Usuarios = [
 
 iniciarSesion = function () {
     if(localStorage.getItem("tipo") == 'adm'){
-    window.location="http://127.0.0.1:5500/panel.html";
-    }         
+    window.location='panel.html';
+    }   
+    if(localStorage.getItem("tipo") == 'prof'){
+        window.location='panel2.html';
+        }        
     
-    //document.getElementById("cabecera").innerHTML = "Panel de control de" + localStorage.getItem("id");
 }
 
 
@@ -61,7 +63,7 @@ var logIn = function (username, password) {
 
 
 
-
-
+//JSON.stringify()
+//JSON.parse()
 
 
