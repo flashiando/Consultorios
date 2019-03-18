@@ -16,7 +16,7 @@ Profesionales.push(new profesional(newId,Nombre,Apellido,Especialidad,ObraSocial
 var crearUsuario = function (userName,password,tipo){
     var numeroId = averiguarId();
     Usuarios.push(new datosUsers(numeroId, userName, password,tipo))
-    return numeroId
+    return numeroId;
 }
 
 var averiguarId = function (){
