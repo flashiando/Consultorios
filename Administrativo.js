@@ -85,5 +85,3 @@ var logIn = function (username, password) {
     }
 }
 
-
-
