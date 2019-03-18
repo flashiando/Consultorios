@@ -10,10 +10,10 @@ var datosUsers = function (id, userName, password, tipo) {
 
 
 var Usuarios = [
-    new datosUsers('001', 'RobertoR', '123456','adm'),
-    new datosUsers('002', 'TatiZ', '123456','adm'),
-    new datosUsers('003', 'CarlaS', '123456','prof'),
-    new datosUsers('004', 'LeoM', '123456','prof'),
+    new datosUsers('1', 'RobertoR', '123456','adm'),
+    new datosUsers('2', 'TatiZ', '123456','adm'),
+    new datosUsers('3', 'CarlaS', '123456','prof'),
+    new datosUsers('4', 'LeoM', '123456','prof'),
 ]
 
 
