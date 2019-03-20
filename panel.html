@@ -41,7 +41,7 @@
                                 tickets</a>
                         </li>
                     </ul>
-                    <h4 class="modal-title my-auto mx-5" id="exampleModalLabel">Carmen Sandiego</h4>
+                    <h4 class="modal-title my-auto mx-5" id="exampleModalLabel"></h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -54,27 +54,19 @@
                                     <form>
 
                                         <div class="form-group row">
-                                            <label for="nombreProfesional"
-                                                class="col-2 col-form-label text-center">Nombre</label>
+                                            <label for="idProfesional"
+                                                class="col-2 col-form-label text-center">ID</label>
                                             <div class="col-8">
-                                                <input class="form-control" type="text" placeholder="Carmen Sandiego"
-                                                    readonly>
-                                            </div>
-                                            <div class="col-2 my-auto">
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="switchEditar">
-                                                    <label class="custom-control-label"
-                                                        for="switchEditar">Editar</label>
-                                                </div>
+                                                <input class="form-control" type="text" placeholder="" readonly> <!-- en placeholder ID -->
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
-                                            <label for="idProfesional"
-                                                class="col-2 col-form-label text-center">ID</label>
+                                            <label for="nombreProfesional"
+                                                class="col-2 col-form-label text-center">Nombre</label>
                                             <div class="col-8">
-                                                <input class="form-control" type="text" placeholder="0002" readonly>
+                                                <input class="form-control" type="text" placeholder=""
+                                                    readonly> <!-- en placeholder NOMBRE -->
                                             </div>
                                             <div class="col-2 my-auto">
                                                 <div class="custom-control custom-switch">
@@ -91,9 +83,9 @@
                                                 class="col-2 col-form-label text-center">Especialidad</label>
                                             <div class="col-8">
                                                 <fieldset disabled="disabled">
-                                                    <select id="disabledSelect" class="form-control">
-                                                        <option>Espia</option>
-                                                        <option>Clinico</option>
+                                                    <select id="disabledSelect" class="form-control"> <!-- en opciones ESPECIALIDADES esto no deberia ser dinamico -->
+                                                        <option></option>
+                                                        <option></option>
                                                     </select>
                                                 </fieldset>
                                             </div>
@@ -132,8 +124,8 @@
                                             <label for="userName"
                                                 class="col-2 col-form-label text-center">Usuario</label>
                                             <div class="col-8">
-                                                <input class="form-control" type="text" placeholder="Carmen123"
-                                                    readonly>
+                                                <input class="form-control" type="text" placeholder=""
+                                                    readonly> <!-- en placeholder USER -->
                                             </div>
                                             <div class="col-2 my-auto">
                                                 <div class="custom-control custom-switch">
@@ -149,7 +141,7 @@
                                             <label for="userPass"
                                                 class="col-2 col-form-label text-center">Password</label>
                                             <div class="col-8">
-                                                <input class="form-control" type="text" placeholder="123456" readonly>
+                                                <input class="form-control" type="text" placeholder="" readonly> <!-- en placeholder PASSWORD -->
                                             </div>
                                             <div class="col-2 my-auto">
                                                 <div class="custom-control custom-switch">
@@ -181,8 +173,8 @@
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <div class="form-group row">
+                                        <!-- revisar form texto -->
+                                    <!--    <div class="form-group row">
                                             <label for="descripcionWeb" class="col-2 col-form-label text-center">Desc.
                                                 Web</label>
                                             <div class="col-8">
@@ -201,12 +193,12 @@
                                                         for="switchEditar">Editar</label>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
 
                                     </form>
                                 </div>
                                 <div class="col-3">
-                                    <img src="img/csd.jpg" width="200px" alt="">
+                                    <img src="img/defaultUser.jpg" width="200px" alt="200px"> <!-- aca FOTO -->
                                 </div>
                             </div>
                         </div>
@@ -224,49 +216,14 @@
                                                     <th>Estado pago</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>0101</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>+maquina1 +maquina2 +maquina3</td>
-                                                    <td>pago</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>0101</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>+maquina1 +maquina2 +maquina3</td>
-                                                    <td>pago</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>0101</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>+maquina1 +maquina2 +maquina3</td>
-                                                    <td>pago</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>0101</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>+maquina1 +maquina2 +maquina3</td>
-                                                    <td>pago</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>0101</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>+maquina1 +maquina2 +maquina3</td>
-                                                    <td>pago</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>0101</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>+maquina1 +maquina2 +maquina3</td>
-                                                    <td>pago</td>
-                                                </tr>
+                                            <tbody> <!-- todos los tr y td siguiente no deberian existir, por ahora los dejo comentados para que se entienda donde van, se puede dejar asi hasta que la funcionalidad este completa -->
+                                          <!--  <tr>
+                                                    <td></td>  aca ID CONSULTORIO 
+                                                    <td></td>  aca ALQUILER 
+                                                    <td></td>  aca FIN ALQUILER 
+                                                    <td></td>  aca ADDONS 
+                                                    <td></td>  aca ESTADO PAGO 
+                                                </tr> -->
                                             </tbody>
                                         </table>
                                     </div>
@@ -284,25 +241,17 @@
                                                     <th>IdConsultorio</th>
                                                     <th>Fecha</th>
                                                     <th>Asunto</th>
-                                                    <th></th>
+                                                    <th></th> <!-- aca CAMPO LIBRE -->
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>00000001</td>
-                                                    <td>0101</td>
-                                                    <td>05/03/2019 15:02</td>
-                                                    <td>es un excelente lugar</td>
-                                                    <td>...</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>00000001</td>
-                                                    <td>0101</td>
-                                                    <td>05/03/2019 15:02</td>
-                                                    <td>es un excelente lugar</td>
-                                                    <td>...</td>
-                                                </tr>
-
+                                            <tbody> <!-- todos los tr y td siguiente no deberian existir, por ahora los dejo comentados para que se entienda donde van, se puede dejar asi hasta que la funcionalidad este completa -->
+                                           <!-- <tr>
+                                                    <td></td>  aca NRO TICKET
+                                                    <td></td>  aca ID CONSULTORIO 
+                                                    <td></td>  aca FECHA
+                                                    <td></td>  aca ASUNTO
+                                                    <td></td>  aca CAMPO LIBRE
+                                                </tr>-->
                                             </tbody>
                                         </table>
                                     </div>
