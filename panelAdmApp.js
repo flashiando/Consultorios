@@ -7,16 +7,18 @@ var administrativo = function (id, Nombre, Apellido, ) {
 
 var crearProfesional = function (userName, password, Nombre, Apellido, Especialidad, ObraSocial, EstadoCuenta) {
 //Crear nuevo Usuario en (TablasUsers.js) ---> Es para el Login
-    var newId = crearUsuario(userName,password,"Prof");
+    var newId = crearUsuario(userName,password,"prof");
 //Crear nuevo profesionales en (panelProfApp.js)---> Es para guardar la info del prof
 Profesionales.push(new profesional(newId,Nombre,Apellido,Especialidad,ObraSocial,EstadoCuenta));
+guardarLS("Profesionales",Profesionales);
 }
 
 
 var crearUsuario = function (userName,password,tipo){
     var numeroId = averiguarId();
     Usuarios.push(new datosUsers(numeroId, userName, password,tipo))
-    return numeroId;
+    guardarLS("Usuarios",Usuarios);
+    return numeroId;    
 }
 
 var averiguarId = function (){
