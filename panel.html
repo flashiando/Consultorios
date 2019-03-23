@@ -40,7 +40,8 @@
                         </li>
                     </ul>
                     <h4 class="modal-title my-auto mx-5" id="exampleModalLabel"></h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="funcionSalirModalSinGrabar()">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="funcionSalirModalSinGrabar()">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -64,7 +65,8 @@
                                             <label for="nombreProfesional"
                                                 class="col-2 col-form-label text-center">Nombre</label>
                                             <div class="col-8">
-                                                <input id="disModal2" class="form-control" type="text" placeholder="" readonly>
+                                                <input id="disModal2" class="form-control" type="text" placeholder=""
+                                                    readonly>
                                                 <!-- en placeholder NOMBRE -->
                                             </div>
                                             <div class="col-2 my-auto">
@@ -80,14 +82,22 @@
                                         <div class="form-group row">
                                             <label for="especialidadProfesional"
                                                 class="col-2 col-form-label text-center">Especialidad</label>
-                                            <div class="col-8">
+                                            <div class="col-5">
                                                 <fieldset id="disModal3" disabled="disabled">
                                                     <select class="form-control">
-                                                        <!-- en opciones ESPECIALIDADES esto no deberia ser dinamico -->
-                                                        <option></option>
-                                                        <option></option>
+                                                        <option>Clinico</option>
+                                                        <option>Psicologo</option>
                                                     </select>
                                                 </fieldset>
+                                            </div>
+                                            <div class="col-3 my-auto">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="checkAgregarEsp">
+                                                    <label class="form-check-label" for="defaultCheck4">
+                                                        Agregar Especialidad
+                                                    </label>
+                                                </div>
                                             </div>
                                             <div class="col-2 my-auto">
                                                 <div class="custom-control custom-switch">
@@ -96,6 +106,17 @@
                                                     <label class="custom-control-label"
                                                         for="switchEditar3">Editar</label>
                                                 </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="campoAgregar" class="form-group row d-none">
+                                            <div class="col-2">
+                                            </div>
+                                            <div class="col-6">
+                                                <input id="agregarEspe" class="form-control" type="text" placeholder="">
+                                            </div>
+                                            <div class="col-2">
+                                                <button type="button" class="btn btn-outline-success">Agregar</button>
                                             </div>
                                         </div>
 
@@ -124,7 +145,8 @@
                                             <label for="userName"
                                                 class="col-2 col-form-label text-center">Usuario</label>
                                             <div class="col-8">
-                                                <input id="disModal5" class="form-control" type="text" placeholder="" readonly>
+                                                <input id="disModal5" class="form-control" type="text" placeholder=""
+                                                    readonly>
                                                 <!-- en placeholder USER -->
                                             </div>
                                             <div class="col-2 my-auto">
@@ -141,7 +163,8 @@
                                             <label for="userPass"
                                                 class="col-2 col-form-label text-center">Password</label>
                                             <div class="col-8">
-                                                <input id="disModal6" class="form-control" type="text" placeholder="" readonly>
+                                                <input id="disModal6" class="form-control" type="text" placeholder=""
+                                                    readonly>
                                                 <!-- en placeholder PASSWORD -->
                                             </div>
                                             <div class="col-2 my-auto">
@@ -264,7 +287,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="funcionSalirModalSinGrabar()">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                        onclick="funcionSalirModalSinGrabar()">Close</button>
                     <button type="button" class="btn btn-primary" onclick="funcionModalGrabando()">Save changes</button>
                 </div>
             </div>
@@ -377,7 +401,8 @@
                 <h3 id="Administrativo" class="mx-auto align-middle">Panel de Control</h3>
             </div>
             <div class="pt-3 pb-2 mb-3 col-3 border-bottom">
-                <button type="button" id="botonSumarProf" class="btn btn-outline-primary d-none" data-toggle="modal" data-target="#modalProfesionalesXL" onclick="funcionRemoverReadonlys()">+ Sumar
+                <button type="button" id="botonSumarProf" class="btn btn-outline-primary d-none" data-toggle="modal"
+                    data-target="#modalProfesionalesXL" onclick="funcionRemoverReadonlys()">+ Sumar
                     profesional</button>
             </div>
         </div>
@@ -408,7 +433,7 @@
                             <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
                             </td>
                         </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
@@ -440,7 +465,7 @@
                             <td>dolor</td>
                             <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
                         </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
@@ -545,7 +570,7 @@
                                     <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0"
                                             data-toggle="modal" data-target="#modalProfesionalesXL">ver</button>
                                 </tr>
-                                
+
                             </tbody>
                         </table>
                     </div>
@@ -650,34 +675,7 @@
                                     <td> <button type="button"
                                             class="btn btn-outline-secondary btn-sm py-0">ver</button>
                                 </tr>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
+
                             </tbody>
                         </table>
                     </div>
@@ -710,30 +708,7 @@
                                 <td>dientitox</td>
                                 <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
                             </tr>
-                            <tr>
-                                <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
-                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </tr>
-                            <tr>
-                                <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
-                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </tr>
-                            <tr>
-                                <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
-                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </tr>
-                            <tr>
-                                <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
-                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -765,30 +740,7 @@
                                 <td>dientitox</td>
                                 <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
                             </tr>
-                            <tr>
-                                <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
-                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </tr>
-                            <tr>
-                                <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
-                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </tr>
-                            <tr>
-                                <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
-                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </tr>
-                            <tr>
-                                <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
-                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -802,10 +754,9 @@
     <!--webfooter-->
 
 
-        <footer class="bg-dark text-white footer mt-auto py-2 align-middle text-right px-5">
-            copyright 2019 Roberto coworking - dir - tel
-        </footer>
-    
+    <footer class="bg-dark text-white footer mt-auto py-2 align-middle text-right px-5">
+        copyright 2019 Roberto coworking - Dirección: Av. Siempreviva 742 - Telefono: 0-800-Roberto
+    </footer>
 
 
     <!--scripts-->
