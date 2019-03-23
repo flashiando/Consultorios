@@ -138,6 +138,13 @@ document.getElementById("switchEditar7").addEventListener("click", function () {
     document.getElementById("disModal7").toggleAttribute("disabled");
 });
 
+
+//funcion togglear agregar especialidad, revisar para eliminar especialidad
+
+$("#checkAgregarEsp").click(function(){
+    $("#campoAgregar").toggleClass("d-none");
+  });
+
 //funcion boton sumar profesional, esto es para que se sumen todos los parametros a 1 sola funcion aca.
 
 function funcionBotonProfesionales() {
