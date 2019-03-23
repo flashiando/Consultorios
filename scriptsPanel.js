@@ -73,24 +73,90 @@ function funcionNavTabsAndPaneNonActive() {
     document.getElementById("navTab3").classList.remove('active');
     document.getElementById("infoDelProfesional").classList.remove('active');
     document.getElementById("historialAlquileresProfesional").classList.remove('active');
-    document.getElementById("historialTicketsProfesional").classList.remove('active'); 
+    document.getElementById("historialTicketsProfesional").classList.remove('active');
 }
 
-function funcionNavTab1(){
+function funcionNavTab1() {
     funcionNavTabsAndPaneNonActive();
     document.getElementById("navTab1").classList.add('active');
     document.getElementById("infoDelProfesional").classList.add('active');
 }
-function funcionNavTab2(){
+function funcionNavTab2() {
     funcionNavTabsAndPaneNonActive();
     document.getElementById("navTab2").classList.add('active');
     document.getElementById("historialAlquileresProfesional").classList.add('active');
 }
-function funcionNavTab3(){
+function funcionNavTab3() {
     funcionNavTabsAndPaneNonActive();
     document.getElementById("navTab3").classList.add('active');
-    document.getElementById("historialTicketsProfesional").classList.add('active'); 
+    document.getElementById("historialTicketsProfesional").classList.add('active');
 }
 
 //boton editar
 
+
+// funcion remover
+
+function funcionRemoverReadonlys() {
+    document.getElementById("disModal2").removeAttribute("readonly");
+    document.getElementById("disModal3").removeAttribute("disabled");
+    document.getElementById("disModal4").removeAttribute("disabled");
+    document.getElementById("disModal5").removeAttribute("readonly");
+    document.getElementById("disModal6").removeAttribute("readonly");
+    document.getElementById("disModal7").removeAttribute("disabled");
+}
+
+// funcion setear
+function funcionSetearReadonlys() {
+    document.getElementById("disModal2").setAttribute("readonly", "");
+    document.getElementById("disModal3").setAttribute("disabled", "disabled");
+    document.getElementById("disModal4").setAttribute("disabled", "disabled");
+    document.getElementById("disModal5").setAttribute("readonly", "");
+    document.getElementById("disModal6").setAttribute("readonly", "");
+    document.getElementById("disModal7").setAttribute("disabled", "disabled");
+}
+
+
+//funciones editar
+
+document.getElementById("switchEditar2").addEventListener("click", function () {
+    document.getElementById("disModal2").toggleAttribute("readonly");
+});
+document.getElementById("switchEditar3").addEventListener("click", function () {
+    document.getElementById("disModal3").toggleAttribute("disabled");
+});
+document.getElementById("switchEditar4").addEventListener("click", function () {
+    document.getElementById("disModal4").toggleAttribute("disabled");
+});
+document.getElementById("switchEditar5").addEventListener("click", function () {
+    document.getElementById("disModal5").toggleAttribute("readonly");
+});
+document.getElementById("switchEditar6").addEventListener("click", function () {
+    document.getElementById("disModal6").toggleAttribute("readonly");
+});
+document.getElementById("switchEditar7").addEventListener("click", function () {
+    document.getElementById("disModal7").toggleAttribute("disabled");
+});
+
+//funcion boton sumar profesional, esto es para que se sumen todos los parametros a 1 sola funcion aca.
+
+function funcionBotonProfesionales() {
+    funcionSetearReadonlys()
+}
+
+//funcion boton sumar administrativo, esto es para que se sumen todos los parametros a 1 sola funcion aca.
+
+function funcionBotonAdministrativos() {
+    funcionSetearReadonlys()
+}
+
+//funciones para modal al salir del mismo
+//se necesitan los IF para que no duplique el readonly?
+
+function funcionSalirModalSinGrabar() {
+    funcionSetearReadonlys();
+}
+
+function funcionModalGrabando() {
+    funcionSetearReadonlys();
+}
