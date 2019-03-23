@@ -42,7 +42,7 @@
                         </li>
                     </ul>
                     <h4 class="modal-title my-auto mx-5" id="exampleModalLabel"></h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="funcionSalirModalSinGrabar()">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -57,7 +57,8 @@
                                             <label for="idProfesional"
                                                 class="col-2 col-form-label text-center">ID</label>
                                             <div class="col-8">
-                                                <input class="form-control" type="text" placeholder="" readonly> <!-- en placeholder ID -->
+                                                <input id="disModal1" class="form-control" type="text" placeholder=""
+                                                    readonly> <!-- en placeholder ID -->
                                             </div>
                                         </div>
 
@@ -65,15 +66,15 @@
                                             <label for="nombreProfesional"
                                                 class="col-2 col-form-label text-center">Nombre</label>
                                             <div class="col-8">
-                                                <input class="form-control" type="text" placeholder=""
-                                                    readonly> <!-- en placeholder NOMBRE -->
+                                                <input id="disModal2" class="form-control" type="text" placeholder="" readonly>
+                                                <!-- en placeholder NOMBRE -->
                                             </div>
                                             <div class="col-2 my-auto">
                                                 <div class="custom-control custom-switch">
                                                     <input type="checkbox" class="custom-control-input"
-                                                        id="switchEditar">
+                                                        id="switchEditar2">
                                                     <label class="custom-control-label"
-                                                        for="switchEditar">Editar</label>
+                                                        for="switchEditar2">Editar</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -82,8 +83,9 @@
                                             <label for="especialidadProfesional"
                                                 class="col-2 col-form-label text-center">Especialidad</label>
                                             <div class="col-8">
-                                                <fieldset disabled="disabled">
-                                                    <select id="disabledSelect" class="form-control"> <!-- en opciones ESPECIALIDADES esto no deberia ser dinamico -->
+                                                <fieldset id="disModal3" disabled="disabled">
+                                                    <select class="form-control">
+                                                        <!-- en opciones ESPECIALIDADES esto no deberia ser dinamico -->
                                                         <option></option>
                                                         <option></option>
                                                     </select>
@@ -92,9 +94,9 @@
                                             <div class="col-2 my-auto">
                                                 <div class="custom-control custom-switch">
                                                     <input type="checkbox" class="custom-control-input"
-                                                        id="switchEditar">
+                                                        id="switchEditar3">
                                                     <label class="custom-control-label"
-                                                        for="switchEditar">Editar</label>
+                                                        for="switchEditar3">Editar</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -103,7 +105,7 @@
                                             <label for="estadoProfesional"
                                                 class="col-2 col-form-label text-center">Estado</label>
                                             <div class="col-8">
-                                                <fieldset disabled="disabled">
+                                                <fieldset id="disModal4" disabled="disabled">
                                                     <select id="disabledSelect" class="form-control">
                                                         <option>Activo</option>
                                                         <option>Inactivo</option>
@@ -113,9 +115,9 @@
                                             <div class="col-2 my-auto">
                                                 <div class="custom-control custom-switch">
                                                     <input type="checkbox" class="custom-control-input"
-                                                        id="switchEditar">
+                                                        id="switchEditar4">
                                                     <label class="custom-control-label"
-                                                        for="switchEditar">Editar</label>
+                                                        for="switchEditar4">Editar</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -124,15 +126,15 @@
                                             <label for="userName"
                                                 class="col-2 col-form-label text-center">Usuario</label>
                                             <div class="col-8">
-                                                <input class="form-control" type="text" placeholder=""
-                                                    readonly> <!-- en placeholder USER -->
+                                                <input id="disModal5" class="form-control" type="text" placeholder="" readonly>
+                                                <!-- en placeholder USER -->
                                             </div>
                                             <div class="col-2 my-auto">
                                                 <div class="custom-control custom-switch">
                                                     <input type="checkbox" class="custom-control-input"
-                                                        id="switchEditar">
+                                                        id="switchEditar5">
                                                     <label class="custom-control-label"
-                                                        for="switchEditar">Editar</label>
+                                                        for="switchEditar5">Editar</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -141,14 +143,15 @@
                                             <label for="userPass"
                                                 class="col-2 col-form-label text-center">Password</label>
                                             <div class="col-8">
-                                                <input class="form-control" type="text" placeholder="" readonly> <!-- en placeholder PASSWORD -->
+                                                <input id="disModal6" class="form-control" type="text" placeholder="" readonly>
+                                                <!-- en placeholder PASSWORD -->
                                             </div>
                                             <div class="col-2 my-auto">
                                                 <div class="custom-control custom-switch">
                                                     <input type="checkbox" class="custom-control-input"
-                                                        id="switchEditar">
+                                                        id="switchEditar6">
                                                     <label class="custom-control-label"
-                                                        for="switchEditar">Editar</label>
+                                                        for="switchEditar6">Editar</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -157,8 +160,8 @@
                                             <label for="tipoCuenta"
                                                 class="col-2 col-form-label text-center">Tipo</label>
                                             <div class="col-8">
-                                                <fieldset disabled="disabled">
-                                                    <select id="disabledSelect" class="form-control">
+                                                <fieldset id="disModal7" disabled="disabled">
+                                                    <select class="form-control">
                                                         <option>Profesional</option>
                                                         <option>Administrativo</option>
                                                     </select>
@@ -167,14 +170,14 @@
                                             <div class="col-2 my-auto">
                                                 <div class="custom-control custom-switch">
                                                     <input type="checkbox" class="custom-control-input"
-                                                        id="switchEditar">
+                                                        id="switchEditar7">
                                                     <label class="custom-control-label"
-                                                        for="switchEditar">Editar</label>
+                                                        for="switchEditar7">Editar</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- revisar form texto -->
-                                    <!--    <div class="form-group row">
+                                        <!--    <div class="form-group row">
                                             <label for="descripcionWeb" class="col-2 col-form-label text-center">Desc.
                                                 Web</label>
                                             <div class="col-8">
@@ -216,8 +219,9 @@
                                                     <th>Estado pago</th>
                                                 </tr>
                                             </thead>
-                                            <tbody> <!-- todos los tr y td siguiente no deberian existir, por ahora los dejo comentados para que se entienda donde van, se puede dejar asi hasta que la funcionalidad este completa -->
-                                          <!--  <tr>
+                                            <tbody>
+                                                <!-- todos los tr y td siguiente no deberian existir, por ahora los dejo comentados para que se entienda donde van, se puede dejar asi hasta que la funcionalidad este completa -->
+                                                <!--  <tr>
                                                     <td></td>  aca ID CONSULTORIO 
                                                     <td></td>  aca ALQUILER 
                                                     <td></td>  aca FIN ALQUILER 
@@ -244,8 +248,9 @@
                                                     <th></th> <!-- aca CAMPO LIBRE -->
                                                 </tr>
                                             </thead>
-                                            <tbody> <!-- todos los tr y td siguiente no deberian existir, por ahora los dejo comentados para que se entienda donde van, se puede dejar asi hasta que la funcionalidad este completa -->
-                                           <!-- <tr>
+                                            <tbody>
+                                                <!-- todos los tr y td siguiente no deberian existir, por ahora los dejo comentados para que se entienda donde van, se puede dejar asi hasta que la funcionalidad este completa -->
+                                                <!-- <tr>
                                                     <td></td>  aca NRO TICKET
                                                     <td></td>  aca ID CONSULTORIO 
                                                     <td></td>  aca FECHA
@@ -261,8 +266,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="funcionSalirModalSinGrabar()">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="funcionModalGrabando()">Save changes</button>
                 </div>
             </div>
         </div>
@@ -374,7 +379,7 @@
                 <h3 id="Administrativo" class="mx-auto align-middle">Panel de Control</h3>
             </div>
             <div class="pt-3 pb-2 mb-3 col-3 border-bottom">
-                <button type="button" id="botonSumarProf" class="btn btn-outline-primary d-none">+ Sumar
+                <button type="button" id="botonSumarProf" class="btn btn-outline-primary d-none" data-toggle="modal" data-target="#modalProfesionalesXL" onclick="funcionRemoverReadonlys()">+ Sumar
                     profesional</button>
             </div>
         </div>
@@ -405,34 +410,7 @@
                             <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
                             </td>
                         </tr>
-                        <tr>
-                            <td>20/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>adipiscing</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
-                        <tr>
-                            <td>21/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>odio</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
-                        <tr>
-                            <td>20/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>adipiscing</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
-                        <tr>
-                            <td>21/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>odio</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
@@ -464,34 +442,7 @@
                             <td>dolor</td>
                             <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
                         </tr>
-                        <tr>
-                            <td>20/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>adipiscing</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
-                        <tr>
-                            <td>21/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>odio</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
-                        <tr>
-                            <td>20/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>adipiscing</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
-                        <tr>
-                            <td>21/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>odio</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
@@ -596,34 +547,7 @@
                                     <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0"
                                             data-toggle="modal" data-target="#modalProfesionalesXL">ver</button>
                                 </tr>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
+                                
                             </tbody>
                         </table>
                     </div>
@@ -905,7 +829,7 @@
     <script src='TablasUsers.js'></script>
     <script src='panelAdmApp.js'></script>
     <script src='panelProfApp.js'></script>
-    
+
 
 
 
