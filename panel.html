@@ -371,6 +371,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#" id="linkAdministrativos" onclick="funcionLinkAdministrativos()">
+                                <span data-feather="shopping-cart"></span>
+                                Administrativos
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#" id="linkConsultorios" onclick="funcionLinkConsultorios()">
                                 <span data-feather="users"></span>
                                 Consultorios
@@ -395,15 +401,10 @@
     </div>
 
     <!--zona principal barra superior-->
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <main role="main" class="col-10 ml-auto px-4">
         <div class="row">
-            <div class="pt-3 pb-2 mb-3 col-9 border-bottom">
+            <div class="pt-3 pb-2 mb-3 col-12 border-bottom">
                 <h3 id="Administrativo" class="mx-auto align-middle">Panel de Control</h3>
-            </div>
-            <div class="pt-3 pb-2 mb-3 col-3 border-bottom">
-                <button type="button" id="botonSumarProf" class="btn btn-outline-primary d-none" data-toggle="modal"
-                    data-target="#modalProfesionalesXL" onclick="funcionRemoverReadonlys()">+ Sumar
-                    profesional</button>
             </div>
         </div>
 
@@ -477,12 +478,17 @@
 
 
         <section id="seccionProfesionales" class="d-none">
-            <div class="row">
-                <div class="col-md-3">
+            <div class="row mb-2">
+                <div class="col-3">
                     <h4>Filtros</h4>
                 </div>
-                <div class="col-md-9">
+                <div class="col-6">
                     <h4>Lista de profesionales</h4>
+                </div>
+                <div class="col-3">
+                    <button type="button" id="botonSumarProf" class="btn btn-outline-primary btn-sm d-none" data-toggle="modal"
+                        data-target="#modalProfesionalesXL" onclick="funcionRemoverReadonlys()">+ Sumar
+                        profesional</button>
                 </div>
             </div>
 
@@ -518,38 +524,101 @@
 
                     <h5 class="border-bottom mt-3">Especialidad</h5>
 
-                    <div class="mb-5">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                Especialidad 1
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                            <label class="form-check-label" for="defaultCheck2">
-                                Especialidad 2
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                            <label class="form-check-label" for="defaultCheck3">
-                                Especialidad 3
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                            <label class="form-check-label" for="defaultCheck4">
-                                Especialidad 4
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
-                            <label class="form-check-label" for="defaultCheck5">
-                                Especialidad 5
-                            </label>
-                        </div>
+                    <select class="form-control form-control-sm">
+                        <option>Small select 1</option>
+                        <option>Small select 2</option>
+                        <option>Small select 3</option>
+                        <option>Small select 4</option>
+                        <option>Small select 5</option>
+                    </select>
+                </div>
+                <div class="col-md-9">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                    <th>IdMedico</th>
+                                    <th>nombreMedico</th>
+                                    <th>especialidad</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0001</td>
+                                    <td>roberto</td>
+                                    <td>elmaestro</td>
+                                    <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0"
+                                            data-toggle="modal" data-target="#modalProfesionalesXL">ver</button>
+                                </tr>
+
+                            </tbody>
+                        </table>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!--seccion administrativos-->
+        <!--seccion administrativos-->
+
+
+        <section id="seccionAdministrativos" class="d-none">
+            <div class="row mb-2">
+                <div class="col-3">
+                    <h4>Filtros</h4>
+                </div>
+                <div class="col-6">
+                    <h4>Lista de administrativos</h4>
+                </div>
+                <div class="col-3">
+                    <button type="button" id="botonSumarAdm" class="btn btn-outline-primary btn-sm d-none"
+                        data-toggle="modal" data-target="#modalProfesionalesXL"
+                        onclick="funcionRemoverReadonlys()">+ Sumar
+                        administrativo</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+
+                    <h5 class="border-bottom mt-3">Estado</h5>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                            value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Activos
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            Inactivos
+                        </label>
+                    </div>
+
+                    <h5 class="border-bottom mt-3">Otra opcion</h5>
+
+                    <select class="form-control form-control-sm">
+                        <option>Small select 1</option>
+                        <option>Small select 2</option>
+                        <option>Small select 3</option>
+                        <option>Small select 4</option>
+                        <option>Small select 5</option>
+                    </select>
+
+                    <h5 class="border-bottom mt-3">Especialidad</h5>
+
+                    <select class="form-control form-control-sm">
+                        <option>Small select 1</option>
+                        <option>Small select 2</option>
+                        <option>Small select 3</option>
+                        <option>Small select 4</option>
+                        <option>Small select 5</option>
+                    </select>
+
                 </div>
                 <div class="col-md-9">
                     <div class="table-responsive">
@@ -583,12 +652,18 @@
 
 
         <section id="seccionConsultorios" class="d-none">
-            <div class="row">
-                <div class="col-md-3">
+            <div class="row mb-2">
+                <div class="col-3">
                     <h4>Filtros</h4>
                 </div>
-                <div class="col-md-9">
-                    <h4>Lista de profesionales</h4>
+                <div class="col-6">
+                    <h4>Lista de consultorios</h4>
+                </div>
+                <div class="col-3">
+                    <button type="button" id="botonSumarConsul" class="btn btn-outline-primary btn-sm d-none"
+                        data-toggle="modal" data-target="#modalConsulXL"
+                        onclick="">+ Sumar
+                        consultorio</button>
                 </div>
             </div>
 
@@ -623,38 +698,14 @@
                     </select>
 
                     <h5 class="border-bottom mt-3">Especialidad</h5>
-                    <div class="mb-5">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                Especialidad 1
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                            <label class="form-check-label" for="defaultCheck2">
-                                Especialidad 2
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                            <label class="form-check-label" for="defaultCheck3">
-                                Especialidad 3
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                            <label class="form-check-label" for="defaultCheck4">
-                                Especialidad 4
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
-                            <label class="form-check-label" for="defaultCheck5">
-                                Especialidad 5
-                            </label>
-                        </div>
-                    </div>
+                    <select class="form-control form-control-sm">
+                        <option>Small select 1</option>
+                        <option>Small select 2</option>
+                        <option>Small select 3</option>
+                        <option>Small select 4</option>
+                        <option>Small select 5</option>
+                    </select>
+
                 </div>
                 <div class="col-md-9">
                     <div class="table-responsive">
