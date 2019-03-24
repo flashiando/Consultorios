@@ -6,6 +6,7 @@ function linksNonActiveAll() {
     document.getElementById("linkTicketsPrivados").classList.remove('active');
     document.getElementById("linkTicketsPublicos").classList.remove('active');
     document.getElementById("linkProfesionales").classList.remove('active');
+    document.getElementById("linkAdministrativos").classList.remove('active');
     document.getElementById("linkConsultorios").classList.remove('active');
     document.getElementById("linkAlquileres").classList.remove('active');
     document.getElementById("linkDeudas").classList.remove('active');
@@ -15,10 +16,13 @@ function seccionDnoneAll() {
     document.getElementById("seccionTicketsPublicos").classList.add('d-none');
     document.getElementById("seccionTicketsPrivados").classList.add('d-none');
     document.getElementById("seccionProfesionales").classList.add('d-none');
+    document.getElementById("seccionAdministrativos").classList.add('d-none');
     document.getElementById("seccionConsultorios").classList.add('d-none');
     document.getElementById("seccionAlquileres").classList.add('d-none');
     document.getElementById("seccionDeudas").classList.add('d-none');
     document.getElementById("botonSumarProf").classList.add('d-none');
+    document.getElementById("botonSumarAdm").classList.add('d-none');
+
 }
 
 function funcionLinkTicketsPublicos() {
@@ -41,7 +45,14 @@ function funcionLinkProfesionales() {
     document.getElementById("linkProfesionales").classList.add('active');
     document.getElementById("seccionProfesionales").classList.remove('d-none');
     document.getElementById("botonSumarProf").classList.remove('d-none');
+}
 
+function funcionLinkAdministrativos() {
+    linksNonActiveAll();
+    seccionDnoneAll();
+    document.getElementById("linkAdministrativos").classList.add('active');
+    document.getElementById("seccionAdministrativos").classList.remove('d-none');
+    document.getElementById("botonSumarAdm").classList.remove('d-none');
 }
 
 function funcionLinkConsultorios() {
@@ -49,6 +60,8 @@ function funcionLinkConsultorios() {
     seccionDnoneAll();
     document.getElementById("linkConsultorios").classList.add('active');
     document.getElementById("seccionConsultorios").classList.remove('d-none');
+    document.getElementById("botonSumarConsul").classList.remove('d-none');
+
 }
 
 function funcionLinkAlquileres() {
