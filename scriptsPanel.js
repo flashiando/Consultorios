@@ -60,6 +60,8 @@ function funcionLinkConsultorios() {
     seccionDnoneAll();
     document.getElementById("linkConsultorios").classList.add('active');
     document.getElementById("seccionConsultorios").classList.remove('d-none');
+    document.getElementById("botonSumarConsul").classList.remove('d-none');
+
 }
 
 function funcionLinkAlquileres() {

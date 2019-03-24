@@ -17,6 +17,8 @@
 
 <body class="d-flex flex-column">
 
+    <!--modal profesionales-->
+    <!--modal profesionales-->
 
     <div class="modal fade" id="modalProfesionalesXL" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -197,28 +199,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- revisar form texto -->
-                                        <!--    <div class="form-group row">
-                                            <label for="descripcionWeb" class="col-2 col-form-label text-center">Desc.
-                                                Web</label>
-                                            <div class="col-8">
-                                                <fieldset disabled="disabled">
-                                                    <div class="form-group">
-                                                        <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                            rows="3"></textarea>
-                                                    </div>
-                                                </fieldset>
-                                            </div>
-                                            <div class="col-2 my-auto">
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="switchEditar">
-                                                    <label class="custom-control-label"
-                                                        for="switchEditar">Editar</label>
-                                                </div>
-                                            </div>
-                                        </div> -->
-
                                     </form>
                                 </div>
                                 <div class="col-3">
@@ -290,6 +270,123 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"
                         onclick="funcionSalirModalSinGrabar()">Close</button>
                     <button type="button" class="btn btn-primary" onclick="funcionModalGrabando()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--modal consultorios-->
+    <!--modal consultorios-->
+
+    <div class="modal fade" id="modalConsultoriosXL" tabindex="-1" role="dialog"
+        aria-labelledby="consultoriosModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <ul class="nav nav-tabs" id="tabContent">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="navTab4" href="#infoDelConsultorio"
+                                onclick="funcionNavTab4()">Información</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="navTab5" href="#historialAlquileresConsultorio"
+                                onclick="funcionNavTab5()">Historial de
+                                alquileres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="navTab6" href="#historialTicketsConsultorio"
+                                onclick="funcionNavTab6()">Historial de
+                                tickets</a>
+                        </li>
+                    </ul>
+                    <h4 class="modal-title my-auto mx-5" id="consultoriosModalLabel"></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="funcionSalirModalSinGrabar2()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="tab-content">
+                        <div class="tab-pane mx-1 my-3 active" id="infoDelConsultorio">
+                            <div class="row">
+                                <div class="col-6">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label for="precioConsul"
+                                                class="col-2 col-form-label text-center">Usuario</label>
+                                            <div class="col-7">
+                                                <input id="disModal5" class="form-control" type="text" placeholder=""
+                                                    readonly>
+                                                <!-- en placeholder USER -->
+                                            </div>
+                                            <div class="col-2 my-auto">
+                                                <div class="custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="switchEditar5">
+                                                    <label class="custom-control-label"
+                                                        for="switchEditar5">Editar</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-6">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label for="m2Consul"
+                                                class="col-2 col-form-label text-center">Usuario</label>
+                                            <div class="col-7">
+                                                <input id="disModal5" class="form-control" type="text" placeholder=""
+                                                    readonly>
+                                            </div>
+                                            <div class="col-2 my-auto">
+                                                <div class="custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="switchEditar5">
+                                                    <label class="custom-control-label"
+                                                        for="switchEditar5">Editar</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group row">
+                                        <label for="descripcionWeb" class="col-2 col-form-label text-center">Desc.
+                                            Web</label>
+                                        <div class="col-8">
+                                            <fieldset disabled="disabled">
+                                                <div class="form-group">
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="3"></textarea>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-2 my-auto">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="switchEditar">
+                                                <label class="custom-control-label" for="switchEditar">Editar</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane mx-1 my-3" id="historialAlquileresConsultorio">
+
+                        </div>
+                        <div class="tab-pane mx-1 my-3" id="historialTicketsProfesional">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                        onclick="funcionSalirModalSinGrabar2()">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="funcionModalGrabando2()">Save
+                        changes</button>
                 </div>
             </div>
         </div>
@@ -371,7 +468,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" id="linkAdministrativos" onclick="funcionLinkAdministrativos()">
+                            <a class="nav-link" href="#" id="linkAdministrativos"
+                                onclick="funcionLinkAdministrativos()">
                                 <span data-feather="shopping-cart"></span>
                                 Administrativos
                             </a>
@@ -413,30 +511,34 @@
 
 
         <section id="seccionTicketsPublicos" class="d-none">
-            <h4 class="my-2">Tickets publicos</h4>
-            <div class="table-responsive">
-                <table class="table table-striped table-sm">
-                    <thead>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>nroTicket</th>
-                            <th>nombre</th>
-                            <th>asunto</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>20/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>dolor</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </td>
-                        </tr>
+            <div class="row mb-2">
+                <h4>Tickets publicos</h4>
+            </div>
+            <div class="row">
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>nroTicket</th>
+                                <th>nombre</th>
+                                <th>asunto</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20/02/2019</td>
+                                <td>0101</td>
+                                <td>asdfasdf</td>
+                                <td>dolor</td>
+                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
+                                </td>
+                            </tr>
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
@@ -446,29 +548,32 @@
 
 
         <section id="seccionTicketsPrivados" class="d-none">
-            <h4 class="my-2">Tickets privados</h4>
-            <div class="table-responsive">
-                <table class="table table-striped table-sm">
-                    <thead>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>nroTicket</th>
-                            <th>nombre</th>
-                            <th>asunto</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>20/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>dolor</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
-
-                    </tbody>
-                </table>
+            <div class="row mb-2">
+                <h4>Tickets privados</h4>
+            </div>
+            <div class="row">
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>nroTicket</th>
+                                <th>nombre</th>
+                                <th>asunto</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20/02/2019</td>
+                                <td>0101</td>
+                                <td>asdfasdf</td>
+                                <td>dolor</td>
+                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
@@ -486,14 +591,15 @@
                     <h4>Lista de profesionales</h4>
                 </div>
                 <div class="col-3">
-                    <button type="button" id="botonSumarProf" class="btn btn-outline-primary btn-sm d-none" data-toggle="modal"
-                        data-target="#modalProfesionalesXL" onclick="funcionRemoverReadonlys()">+ Sumar
+                    <button type="button" id="botonSumarProf" class="btn btn-outline-primary btn-sm d-none"
+                        data-toggle="modal" data-target="#modalProfesionalesXL" onclick="funcionRemoverReadonlys()">+
+                        Sumar
                         profesional</button>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-3">
 
                     <h5 class="border-bottom mt-3">Estado</h5>
 
@@ -532,7 +638,7 @@
                         <option>Small select 5</option>
                     </select>
                 </div>
-                <div class="col-md-9">
+                <div class="col-9">
                     <div class="table-responsive">
                         <table class="table table-striped table-sm">
                             <thead>
@@ -573,14 +679,14 @@
                 </div>
                 <div class="col-3">
                     <button type="button" id="botonSumarAdm" class="btn btn-outline-primary btn-sm d-none"
-                        data-toggle="modal" data-target="#modalProfesionalesXL"
-                        onclick="funcionRemoverReadonlys()">+ Sumar
+                        data-toggle="modal" data-target="#modalProfesionalesXL" onclick="funcionRemoverReadonlys()">+
+                        Sumar
                         administrativo</button>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-3">
 
                     <h5 class="border-bottom mt-3">Estado</h5>
 
@@ -620,7 +726,7 @@
                     </select>
 
                 </div>
-                <div class="col-md-9">
+                <div class="col-9">
                     <div class="table-responsive">
                         <table class="table table-striped table-sm">
                             <thead>
@@ -661,14 +767,13 @@
                 </div>
                 <div class="col-3">
                     <button type="button" id="botonSumarConsul" class="btn btn-outline-primary btn-sm d-none"
-                        data-toggle="modal" data-target="#modalConsulXL"
-                        onclick="">+ Sumar
+                        data-toggle="modal" data-target="#modalConsultoriosXL" onclick="">+ Sumar
                         consultorio</button>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-3">
 
                     <h5 class="border-bottom mt-3">Estado</h5>
 
@@ -707,7 +812,7 @@
                     </select>
 
                 </div>
-                <div class="col-md-9">
+                <div class="col-9">
                     <div class="table-responsive">
                         <table class="table table-striped table-sm">
                             <thead>
@@ -740,8 +845,10 @@
 
 
         <section id="seccionAlquileres" class="d-none">
-            <h4>Alquileres venciendo</h4>
-            <div class="col-md-12 px-0">
+            <div class="row mb-2">
+                <h4>Alquileres venciendo</h4>
+            </div>
+            <div class="row">
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
                         <thead>
@@ -772,8 +879,10 @@
 
 
         <section id="seccionDeudas" class="d-none">
-            <h4>Deudas</h4>
-            <div class="col-md-12 px-0">
+            <div class="row mb-2">
+                <h4>Deudas</h4>
+            </div>
+            <div class="row">
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
                         <thead>
@@ -791,7 +900,6 @@
                                 <td>dientitox</td>
                                 <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
                             </tr>
-
                         </tbody>
                     </table>
                 </div>
