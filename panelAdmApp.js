@@ -83,7 +83,18 @@ function addRow(tableID,profID,nombreProf,especialidad) {
     newCell2.appendChild(newText2);
     newCell3.appendChild(newText3);
     //falta insertar boton de 'Ver'
-  }
+}
+
+function cargarDatos(arrayDeDatos) {
+    //Recorrrer el array Profesionales para que muestre los datos en la tabla 
+    //porcada registro del arrray
+    arrayDeDatos.forEach(element => {
+        addRow("lista-profesionales",element.id,element.nombre,element.especialidad)
+    });
+    //llamar a la funcion addRow y pasarle los parametros a completar
+}
+
+
 
 
 
