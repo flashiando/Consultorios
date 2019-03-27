@@ -61,7 +61,29 @@ var inicioS = function () {
     document.getElementById("Administrativo").innerHTML = "Panel de control de " + adminLogueado.nombre;
 }
 
+// Funcionalidad para cargar la tabla de profesionales dinamicamente
 
+function addRow(tableID,profID,nombreProf,especialidad) {
+    // Obtiene una referencia a la tabla
+    var tableRef = document.getElementById(tableID);
+  
+    // Inserta una fila en la tabla, en el ultimo indice
+    var newRow   = tableRef.insertRow();
+  
+    // Inserta una celda en la fila, en el ultimo indice
+    var newCell1  = newRow.insertCell(); 
+    var newCell2 = newRow.insertCell(); 
+    var newCell3 = newRow.insertCell(); 
+  
+    // Añade un nodo de texto a la celda
+    var newText1 = document.createTextNode(profID);
+    var newText2 = document.createTextNode(nombreProf);
+    var newText3 = document.createTextNode(especialidad)
+    newCell1.appendChild(newText1);
+    newCell2.appendChild(newText2);
+    newCell3.appendChild(newText3);
+    //falta insertar boton de 'Ver'
+  }
 
 
 
