@@ -112,21 +112,23 @@ function funcionNavTab3() {
 
 function funcionRemoverReadonlys() {
     document.getElementById("disModal2").removeAttribute("readonly");
-    document.getElementById("disModal3").removeAttribute("disabled");
+    document.getElementById("disModal3").removeAttribute("readonly");
     document.getElementById("disModal4").removeAttribute("disabled");
-    document.getElementById("disModal5").removeAttribute("readonly");
+    document.getElementById("disModal5").removeAttribute("disabled");
     document.getElementById("disModal6").removeAttribute("readonly");
-    document.getElementById("disModal7").removeAttribute("disabled");
+    document.getElementById("disModal7").removeAttribute("readonly");
+    document.getElementById("disModal8").removeAttribute("disabled");
 }
 
 // funcion setear
 function funcionSetearReadonlys() {
     document.getElementById("disModal2").setAttribute("readonly", "");
-    document.getElementById("disModal3").setAttribute("disabled", "disabled");
+    document.getElementById("disModal3").setAttribute("readonly", "");
     document.getElementById("disModal4").setAttribute("disabled", "disabled");
-    document.getElementById("disModal5").setAttribute("readonly", "");
+    document.getElementById("disModal5").setAttribute("disabled", "disabled");
     document.getElementById("disModal6").setAttribute("readonly", "");
-    document.getElementById("disModal7").setAttribute("disabled", "disabled");
+    document.getElementById("disModal7").setAttribute("readonly", "");
+    document.getElementById("disModal8").setAttribute("disabled", "disabled");
 }
 
 
@@ -136,38 +138,83 @@ document.getElementById("switchEditar2").addEventListener("click", function () {
     document.getElementById("disModal2").toggleAttribute("readonly");
 });
 document.getElementById("switchEditar3").addEventListener("click", function () {
-    document.getElementById("disModal3").toggleAttribute("disabled");
+    document.getElementById("disModal3").toggleAttribute("readonly");
 });
 document.getElementById("switchEditar4").addEventListener("click", function () {
     document.getElementById("disModal4").toggleAttribute("disabled");
 });
 document.getElementById("switchEditar5").addEventListener("click", function () {
-    document.getElementById("disModal5").toggleAttribute("readonly");
+    document.getElementById("disModal5").toggleAttribute("disabled");
 });
 document.getElementById("switchEditar6").addEventListener("click", function () {
     document.getElementById("disModal6").toggleAttribute("readonly");
 });
 document.getElementById("switchEditar7").addEventListener("click", function () {
-    document.getElementById("disModal7").toggleAttribute("disabled");
+    document.getElementById("disModal7").toggleAttribute("readonly");
+});
+document.getElementById("switchEditar8").addEventListener("click", function () {
+    document.getElementById("disModal8").toggleAttribute("disabled");
 });
 
+//funcion ocultar y mostrar todos los switch editar
 
-//funcion togglear agregar especialidad, revisar para eliminar especialidad
+function hideAllEdit(){
+    document.getElementById("masterSwitchEditar2").classList.add('d-none');
+    document.getElementById("masterSwitchEditar3").classList.add('d-none');
+    document.getElementById("masterSwitchEditar4").classList.add('d-none');
+    document.getElementById("masterSwitchEditar5").classList.add('d-none');
+    document.getElementById("masterSwitchEditar6").classList.add('d-none');
+    document.getElementById("masterSwitchEditar7").classList.add('d-none');
+    document.getElementById("masterSwitchEditar8").classList.add('d-none');
+}
 
-$("#checkAgregarEsp").click(function(){
+function showAllEdit(){
+    document.getElementById("masterSwitchEditar2").classList.remove('d-none');
+    document.getElementById("masterSwitchEditar3").classList.remove('d-none');
+    document.getElementById("masterSwitchEditar4").classList.remove('d-none');
+    document.getElementById("masterSwitchEditar5").classList.remove('d-none');
+    document.getElementById("masterSwitchEditar6").classList.remove('d-none');
+    document.getElementById("masterSwitchEditar7").classList.remove('d-none');
+    document.getElementById("masterSwitchEditar8").classList.remove('d-none');
+}
+
+//funcion togglear agregar especialidad y obra social, revisar para eliminar especialidad ya creada y transformar codigo a vainilla
+
+$("#checkAgregarEsp").click(function () {
     $("#campoAgregar").toggleClass("d-none");
-  });
+});
+
+$("#checkAgregarObraSoc").click(function () {
+    $("#campoAgregarObraSoc").toggleClass("d-none");
+});
+
+//funcion ocultar tabs historiales
+
+function funcionOcultarTabsParaSumar() {
+    document.getElementById("navTab2").classList.add('d-none');
+    document.getElementById("navTab3").classList.add('d-none');
+}
+
+//funcion volver las tabs a la normalidad
+function funcionSetearTabsParaSumar() {
+    document.getElementById("navTab2").classList.remove('d-none');
+    document.getElementById("navTab3").classList.remove('d-none');
+}
 
 //funcion boton sumar profesional, esto es para que se sumen todos los parametros a 1 sola funcion aca.
 
 function funcionBotonProfesionales() {
-    funcionSetearReadonlys()
+    funcionRemoverReadonlys();
+    funcionOcultarTabsParaSumar();
+    hideAllEdit();
 }
 
 //funcion boton sumar administrativo, esto es para que se sumen todos los parametros a 1 sola funcion aca.
 
 function funcionBotonAdministrativos() {
-    funcionSetearReadonlys()
+    funcionRemoverReadonlys();
+    funcionOcultarTabsParaSumar();
+    hideAllEdit();
 }
 
 //funciones para modal al salir del mismo
@@ -175,8 +222,12 @@ function funcionBotonAdministrativos() {
 
 function funcionSalirModalSinGrabar() {
     funcionSetearReadonlys();
+    funcionSetearTabsParaSumar();
+    showAllEdit();
 }
 
 function funcionModalGrabando() {
     funcionSetearReadonlys();
+    funcionSetearTabsParaSumar();
+    showAllEdit();
 }
