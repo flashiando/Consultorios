@@ -85,7 +85,7 @@ function addRow(tableID,profID,nombreProf,especialidad) {
     //falta insertar boton de 'Ver'
 }
 
-function cargarDatos(arrayDeDatos) {
+function cargarDatosTabla(arrayDeDatos) {
     //Recorrrer el array Profesionales para que muestre los datos en la tabla 
     //porcada registro del arrray
     arrayDeDatos.forEach(element => {
