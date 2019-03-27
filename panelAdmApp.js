@@ -14,22 +14,16 @@ var crearProfesional = function (userName, password, Nombre, Apellido, Especiali
 }
 
 var cargarDatosNuevosUsuarios = function () {
-    console.log('Funca');
-    var username = document.getElementById("disModal5").value;
-    console.log('username' + username);
-    var password = document.getElementById("disModal6").value;
-    console.log('password' + password);
+
+    var username = document.getElementById("disModal6").value;
+    var password = document.getElementById("disModal7").value;
     var nombre = document.getElementById("disModal2").value;
-    console.log('nombre' + nombre);
-    //var apellido = document.getElementById("disModal").value;  
-    //Al modal de Crear profesional hay qe hacer un nuevo de apellido 
-    var especialidad = document.getElementById("disModal3").value;
-    console.log('especialidad' + especialidad )
-    //var obrasocial = document.getElementById("obrasocial").value;
-    //var estadodecuenta = document.getElementById("disModal4").value;
-    //console.log("Estado de cuenta " + estadodecuenta);
-    crearProfesional(username, password, nombre, 'apellido', especialidad, 'obrasocial', 'estadodecuenta')
-    //console.log( username + password + nombre + apellido + especialidad + estadodecuenta );
+    var apellido = document.getElementById("disModal3").value;
+    var especialidad = document.getElementById("especialidad").value;
+    var obrasocial = document.getElementById("obraSocial").value;
+    var estadodecuenta = document.getElementById("disabledSelect").value;
+    crearProfesional(username, password, nombre, apellido, especialidad, obrasocial, estadodecuenta)
+
 }
 
 //Al modal de Crear profesional hay qe hacer un nuevo de apellido  y de apellido 
@@ -63,18 +57,18 @@ var inicioS = function () {
 
 // Funcionalidad para cargar la tabla de profesionales dinamicamente
 
-function addRow(tableID,profID,nombreProf,especialidad) {
+function addRow(tableID, profID, nombreProf, especialidad) {
     // Obtiene una referencia a la tabla
     var tableRef = document.getElementById(tableID);
-  
+
     // Inserta una fila en la tabla, en el ultimo indice
-    var newRow   = tableRef.insertRow();
-  
+    var newRow = tableRef.insertRow();
+
     // Inserta una celda en la fila, en el ultimo indice
-    var newCell1  = newRow.insertCell(); 
-    var newCell2 = newRow.insertCell(); 
-    var newCell3 = newRow.insertCell(); 
-  
+    var newCell1 = newRow.insertCell();
+    var newCell2 = newRow.insertCell();
+    var newCell3 = newRow.insertCell();
+
     // Añade un nodo de texto a la celda
     var newText1 = document.createTextNode(profID);
     var newText2 = document.createTextNode(nombreProf);
@@ -85,14 +79,25 @@ function addRow(tableID,profID,nombreProf,especialidad) {
     //falta insertar boton de 'Ver'
 }
 
-function cargarDatosTabla(arrayDeDatos) {
+function vaciarTabla(tableID) {
+    var numeroDeFilas = document.getElementById(tableID).rows.length - 1;
+    for (paso = 0; paso < numeroDeFilas; paso++) {
+        document.getElementById(tableID).deleteRow(-1);
+    };
+}
+
+function cargarDatosTabla(arrayDeDatos, tableID) {
+    vaciarTabla(tableID)
     //Recorrrer el array Profesionales para que muestre los datos en la tabla 
     //porcada registro del arrray
     arrayDeDatos.forEach(element => {
-        addRow("lista-profesionales",element.id,element.nombre,element.especialidad)
+        //llamar a la funcion addRow y pasarle los parametros a completar
+        addRow(tableID, element.id, element.nombre, element.especialidad)
     });
-    //llamar a la funcion addRow y pasarle los parametros a completar
+
 }
+
+
 
 
 
