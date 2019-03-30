@@ -82,22 +82,22 @@
                                         </div>
 
                                         <div class="form-group row">
-                                                <label for="nombreProfesional"
-                                                    class="col-2 col-form-label text-center">Apellido</label>
-                                                <div class="col-8">
-                                                    <input id="disModal3" class="form-control" type="text" placeholder=""
-                                                        readonly>
-                                                    <!-- en placeholder APELLIDO -->
-                                                </div>
-                                                <div class="col-2 my-auto">
-                                                    <div class="custom-control custom-switch" id="masterSwitchEditar3">
-                                                        <input type="checkbox" class="custom-control-input"
-                                                            id="switchEditar3">
-                                                        <label class="custom-control-label"
-                                                            for="switchEditar3">Editar</label>
-                                                    </div>
+                                            <label for="nombreProfesional"
+                                                class="col-2 col-form-label text-center">Apellido</label>
+                                            <div class="col-8">
+                                                <input id="disModal3" class="form-control" type="text" placeholder=""
+                                                    readonly>
+                                                <!-- en placeholder APELLIDO -->
+                                            </div>
+                                            <div class="col-2 my-auto">
+                                                <div class="custom-control custom-switch" id="masterSwitchEditar3">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="switchEditar3">
+                                                    <label class="custom-control-label"
+                                                        for="switchEditar3">Editar</label>
                                                 </div>
                                             </div>
+                                        </div>
 
                                         <div class="form-group row">
                                             <label for="especialidadProfesional"
@@ -198,49 +198,49 @@
                                         </div>
 
                                         <div class="form-group row">
-                                                <label for="obraSoc"
-                                                    class="col-2 col-form-label text-center">Obra Social</label>
-                                                <div class="col-5">
-                                                    <fieldset id="disModal8" disabled="disabled">
-                                                        <select class="form-control">
-                                                            <option>OSDE</option>
-                                                            <option>Galeno</option>
-                                                        </select>
-                                                    </fieldset>
-                                                </div>
-                                                <div class="col-3 my-auto">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="checkAgregarObraSoc">
-                                                        <label class="form-check-label" for="">
-                                                            Agregar Obra Social
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-2 my-auto">
-                                                    <div class="custom-control custom-switch" id="masterSwitchEditar8">
-                                                        <input type="checkbox" class="custom-control-input"
-                                                            id="switchEditar8">
-                                                        <label class="custom-control-label"
-                                                            for="switchEditar8">Editar</label>
-                                                    </div>
+                                            <label for="obraSoc" class="col-2 col-form-label text-center">Obra
+                                                Social</label>
+                                            <div class="col-5">
+                                                <fieldset id="disModal8" disabled="disabled">
+                                                    <select class="form-control">
+                                                        <option>OSDE</option>
+                                                        <option>Galeno</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-3 my-auto">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="checkAgregarObraSoc">
+                                                    <label class="form-check-label" for="">
+                                                        Agregar Obra Social
+                                                    </label>
                                                 </div>
                                             </div>
-    
-                                            <div id="campoAgregarObraSoc" class="form-group row d-none">
-                                                <div class="col-2">
-                                                </div>
-                                                <div class="col-6">
-                                                    <input id="agregarEspe" class="form-control" type="text" placeholder="">
-                                                </div>
-                                                <div class="col-2">
-                                                    <button type="button" class="btn btn-outline-success">Agregar</button>
+                                            <div class="col-2 my-auto">
+                                                <div class="custom-control custom-switch" id="masterSwitchEditar8">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="switchEditar8">
+                                                    <label class="custom-control-label"
+                                                        for="switchEditar8">Editar</label>
                                                 </div>
                                             </div>
+                                        </div>
+
+                                        <div id="campoAgregarObraSoc" class="form-group row d-none">
+                                            <div class="col-2">
+                                            </div>
+                                            <div class="col-6">
+                                                <input id="agregarEspe" class="form-control" type="text" placeholder="">
+                                            </div>
+                                            <div class="col-2">
+                                                <button type="button" class="btn btn-outline-success">Agregar</button>
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                                 <div class="col-3">
-                                    <img src="img/defaultUser.jpg" width="200px" alt="200px"> <!-- aca FOTO -->
+                                    <img src="img/defaultUser.jpg" width="200px" height="200px"> <!-- aca FOTO -->
                                     <br>
                                     <br>
                                     <form>
@@ -322,7 +322,6 @@
 
     <!--modal consultorios-->
     <!--modal consultorios-->
-    <!--modal consultorios-->
 
     <div class="modal fade" id="modalConsultoriosXL" tabindex="-1" role="dialog"
         aria-labelledby="consultoriosModalLabel" aria-hidden="true">
@@ -354,6 +353,18 @@
                 <div class="modal-body">
                     <div class="tab-content">
                         <div class="tab-pane mx-1 my-3 active" id="infoDelConsultorio">
+                            <div class="row">
+                                <div class="col-6 d-flex justify-content-end mb-4">
+                                    <img src="img/defaultUser.jpg" width="200px" height="200px"> <!-- aca FOTO -->
+                                </div>
+                                <div class="col-6 d-flex justify-content-start align-self-center">
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="file" class="form-control-file" id="FormControlFile0">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-6">
                                     <form>
