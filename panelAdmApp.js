@@ -22,11 +22,19 @@ var cargarDatosNuevosUsuarios = function () {
     var especialidad = document.getElementById("especialidad").value;
     var obrasocial = document.getElementById("obraSocial").value;
     var estadodecuenta = document.getElementById("disabledSelect").value;
-    crearProfesional(username, password, nombre, apellido, especialidad, obrasocial, estadodecuenta)
-
+    if(validarDatos(nombre,apellido)) {
+        crearProfesional(username, password, nombre, apellido, especialidad, obrasocial, estadodecuenta) 
+    } else { alert("Verificar datos ingresados")}   
+    
 }
 
-//Al modal de Crear profesional hay qe hacer un nuevo de apellido  y de apellido 
+ //Validar datos. nombre y apellido > 1 caracter.   + Usuario que no se repita  + validar password
+
+ var validarDatos = function (nombre, apellido) {
+    if((nombre.length > 0) && (apellido.length > 0 )) {
+        return true
+    }
+ }
 
 
 var crearUsuario = function (userName, password, tipo) {
