@@ -22,7 +22,7 @@ var cargarDatosNuevosUsuarios = function () {
     var especialidad = document.getElementById("especialidad").value;
     var obrasocial = document.getElementById("obraSocial").value;
     var estadodecuenta = document.getElementById("disabledSelect").value;
-    if(validarDatos(nombre,apellido)) {
+    if(validarDatos(nombre,apellido,username)&& (validarDatos(username,password,"undefined"))) {
         crearProfesional(username, password, nombre, apellido, especialidad, obrasocial, estadodecuenta) 
     } else { alert("Verificar datos ingresados")}   
     
@@ -30,10 +30,17 @@ var cargarDatosNuevosUsuarios = function () {
 
  //Validar datos. nombre y apellido > 1 caracter.   + Usuario que no se repita  + validar password
 
- var validarDatos = function (nombre, apellido) {
-    if((nombre.length > 0) && (apellido.length > 0 )) {
+ var validarDatos = function (nombre, apellido,username) {
+    if((nombre.length > 0) && (apellido.length > 0 ) && (validarUsername(username) == true)) {
         return true
     }
+ }
+
+ var validarUsername = function (username) {
+   var UN = Usuarios.find(function(element){return element.userName === username});
+   if (UN == undefined) {
+       return true
+   } else { alert ('El Username ya existe. Por favor intente nuevamente.')}
  }
 
 
