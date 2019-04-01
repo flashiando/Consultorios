@@ -68,19 +68,25 @@ function addRow(tableID, profID, nombreProf, especialidad) {
     var newCell1 = newRow.insertCell();
     var newCell2 = newRow.insertCell();
     var newCell3 = newRow.insertCell();
-
+    var newCell4 = newRow.insertCell();
+    
     // Añade un nodo de texto a la celda
     var newText1 = document.createTextNode(profID);
     var newText2 = document.createTextNode(nombreProf);
     var newText3 = document.createTextNode(especialidad)
+    var botonVer = newCell4.insertAdjacentHTML('afterbegin', '<td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>');
+   
     newCell1.appendChild(newText1);
     newCell2.appendChild(newText2);
     newCell3.appendChild(newText3);
+    newCell4.appendChild(botonVer);
+    
+    
     //falta insertar boton de 'Ver'
 }
 
 function vaciarTabla(tableID) {
-    var numeroDeFilas = document.getElementById(tableID).rows.length - 1;
+    var numeroDeFilas = document.getElementById(tableID).rows.length - 2;
     for (paso = 0; paso < numeroDeFilas; paso++) {
         document.getElementById(tableID).deleteRow(-1);
     };
