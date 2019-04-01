@@ -74,15 +74,12 @@ function addRow(tableID, profID, nombreProf, especialidad) {
     var newText1 = document.createTextNode(profID);
     var newText2 = document.createTextNode(nombreProf);
     var newText3 = document.createTextNode(especialidad)
-    var botonVer = newCell4.insertAdjacentHTML('afterbegin', '<td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>');
+    var botonVer = newCell4.insertAdjacentHTML('afterbegin', '<td> <button type="button" class="btn btn-outline-secondary btn-sm py-0" data-toggle="modal" data-target="#modalProfesionalesXL">ver</button></td>');
    
     newCell1.appendChild(newText1);
     newCell2.appendChild(newText2);
-    newCell3.appendChild(newText3);
-    newCell4.appendChild(botonVer);
+    newCell3.appendChild(newText3);   
     
-    
-    //falta insertar boton de 'Ver'
 }
 
 function vaciarTabla(tableID) {
