@@ -22,26 +22,26 @@ var cargarDatosNuevosUsuarios = function () {
     var especialidad = document.getElementById("especialidad").value;
     var obrasocial = document.getElementById("obraSocial").value;
     var estadodecuenta = document.getElementById("disabledSelect").value;
-    if(validarDatos(nombre,apellido,username)&& (validarDatos(username,password,"undefined"))) {
-        crearProfesional(username, password, nombre, apellido, especialidad, obrasocial, estadodecuenta) 
-    } else { alert("Verificar datos ingresados")}   
-    
+    if (validarDatos(nombre, apellido, username) && (validarDatos(username, password, "undefined"))) {
+        crearProfesional(username, password, nombre, apellido, especialidad, obrasocial, estadodecuenta)
+    } else { alert("Verificar datos ingresados") }
+
 }
 
- //Validar datos. nombre y apellido > 1 caracter.   + Usuario que no se repita  + validar password
+//Validar datos. nombre y apellido > 1 caracter.   + Usuario que no se repita  + validar password
 
- var validarDatos = function (nombre, apellido,username) {
-    if((nombre.length > 0) && (apellido.length > 0 ) && (validarUsername(username) == true)) {
+var validarDatos = function (nombre, apellido, username) {
+    if ((nombre.length > 0) && (apellido.length > 0) && (validarUsername(username) == true)) {
         return true
     }
- }
+}
 
- var validarUsername = function (username) {
-   var UN = Usuarios.find(function(element){return element.userName === username});
-   if (UN == undefined) {
-       return true
-   } else { alert ('El Username ya existe. Por favor intente nuevamente.')}
- }
+var validarUsername = function (username) {
+    var UN = Usuarios.find(function (element) { return element.userName === username });
+    if (UN == undefined) {
+        return true
+    } else { alert('El Username ya existe. Por favor intente nuevamente.') }
+}
 
 
 var crearUsuario = function (userName, password, tipo) {
@@ -84,17 +84,17 @@ function addRow(tableID, profID, nombreProf, especialidad) {
     var newCell2 = newRow.insertCell();
     var newCell3 = newRow.insertCell();
     var newCell4 = newRow.insertCell();
-    
+
     // Añade un nodo de texto a la celda
     var newText1 = document.createTextNode(profID);
     var newText2 = document.createTextNode(nombreProf);
     var newText3 = document.createTextNode(especialidad)
     var botonVer = newCell4.insertAdjacentHTML('afterbegin', '<td> <button type="button" class="btn btn-outline-secondary btn-sm py-0" data-toggle="modal" data-target="#modalProfesionalesXL">ver</button></td>');
-   
+
     newCell1.appendChild(newText1);
     newCell2.appendChild(newText2);
-    newCell3.appendChild(newText3);   
-    
+    newCell3.appendChild(newText3);
+
 }
 
 function vaciarTabla(tableID) {
@@ -114,6 +114,52 @@ function cargarDatosTabla(arrayDeDatos, tableID) {
     });
 
 }
+
+
+
+// Cargar del usuario en cuestion en el modal. Al apretar el boton de ver
+
+/*funcion mostrarEnModar (id)
+1-Reconocer la instancia dfel profesional. encontrar el this
+1-completar el modal llamando a los datos necesarios. 
+hacerla funcional solo para profesionales.. luego para todo. 
+*/
+
+var mostrarEnModal = function (idProf) {
+    var profSelec = Profesionales.find(function (element) {
+        return element.id == idProf;
+    });
+    var usuarioSelec = Usuarios.find(function (element) {
+        return element.id == idProf;
+    });
+     //Parte 1 -selecciona los campos a modificar del html- 
+  
+    var idUser = document.getElementById("disModal1");
+    var username = document.getElementById("disModal6");
+    var password = document.getElementById("disModal7");
+    var nombre = document.getElementById("disModal2");
+    var apellido = document.getElementById("disModal3");
+    var especialidad = document.getElementById("especialidad");
+    var obrasocial = document.getElementById("obraSocial");
+    var estadodecuenta = document.getElementById("disabledSelect");
+
+    //Parte 2 -Carga los datos correspondientes en el html 
+
+    idUser.setAttribute('placeholder', usuarioSelec.id);
+    username.setAttribute('placeholder', usuarioSelec.userName);
+    password.setAttribute('placeholder', usuarioSelec.password);
+    nombre.setAttribute('placeholder', profSelec.nombre);
+    apellido.setAttribute('placeholder', profSelec.apellido);;
+    especialidad.setAttribute('placeholder', profSelec.especialidad);
+    obrasocial.setAttribute('placeholder', profSelec.obrasocial);
+    estadodecuenta.setAttribute('placeholder', profSelec.estadodecuenta);
+    console.log(profSelec);
+    console.log(usuarioSelec);
+
+}
+
+
+
 
 
 
