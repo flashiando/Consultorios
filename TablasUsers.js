@@ -26,7 +26,7 @@ var cargarDatos = function () {
             new datosUsers('2', 'TatiZ', '123456', 'adm'),
             new datosUsers('3', 'CarlaS', '123456', 'prof'),
             new datosUsers('4', 'LeoM', '123456', 'prof'),
-        ]
+            ]
     }
     
    

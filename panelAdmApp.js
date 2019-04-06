@@ -76,8 +76,10 @@ function addRow(tableID, profID, nombreProf, especialidad) {
     // Obtiene una referencia a la tabla
     var tableRef = document.getElementById(tableID);
 
+
     // Inserta una fila en la tabla, en el ultimo indice
     var newRow = tableRef.insertRow();
+
 
     // Inserta una celda en la fila, en el ultimo indice
     var newCell1 = newRow.insertCell();
@@ -85,17 +87,32 @@ function addRow(tableID, profID, nombreProf, especialidad) {
     var newCell3 = newRow.insertCell();
     var newCell4 = newRow.insertCell();
 
+
     // Añade un nodo de texto a la celda
     var newText1 = document.createTextNode(profID);
     var newText2 = document.createTextNode(nombreProf);
     var newText3 = document.createTextNode(especialidad)
-    var botonVer = newCell4.insertAdjacentHTML('afterbegin', '<td> <button type="button" class="btn btn-outline-secondary btn-sm py-0" data-toggle="modal" data-target="#modalProfesionalesXL">ver</button></td>');
 
+
+    //Añade y configura el boton Ver    
+    var botonVer = document.createElement("button");
+    botonVer.innerHTML = 'Ver';
+    botonVer.setAttribute('class', "btn btn-outline-secondary btn-sm py-0");
+    botonVer.setAttribute('data-toggle', "modal");
+    botonVer.setAttribute('data-target', '#modalProfesionalesXL');
+    var x = 'mostrarEnModal(' + profID + ')'
+    botonVer.setAttribute('onclick', x);
+
+
+    //Inserta en el html los objetos creados.
     newCell1.appendChild(newText1);
     newCell2.appendChild(newText2);
     newCell3.appendChild(newText3);
+    newCell4.appendChild(botonVer);
 
 }
+
+
 
 function vaciarTabla(tableID) {
     var numeroDeFilas = document.getElementById(tableID).rows.length - 2;
@@ -132,8 +149,8 @@ var mostrarEnModal = function (idProf) {
     var usuarioSelec = Usuarios.find(function (element) {
         return element.id == idProf;
     });
-     //Parte 1 -selecciona los campos a modificar del html- 
-  
+    //Parte 1 -selecciona los campos a modificar del html- 
+
     var idUser = document.getElementById("disModal1");
     var username = document.getElementById("disModal6");
     var password = document.getElementById("disModal7");
@@ -144,17 +161,28 @@ var mostrarEnModal = function (idProf) {
     var estadodecuenta = document.getElementById("disabledSelect");
 
     //Parte 2 -Carga los datos correspondientes en el html 
+    if (idProf == 'vacio') {
+        idUser.setAttribute('placeholder', '');
+        username.setAttribute('placeholder','');
+        password.setAttribute('placeholder','');
+        nombre.setAttribute('placeholder','');
+        apellido.setAttribute('placeholder','');;
+        especialidad.setAttribute('placeholder', '');
+        obrasocial.setAttribute('placeholder', '');
+        estadodecuenta.setAttribute('placeholder','');
 
-    idUser.setAttribute('placeholder', usuarioSelec.id);
-    username.setAttribute('placeholder', usuarioSelec.userName);
-    password.setAttribute('placeholder', usuarioSelec.password);
-    nombre.setAttribute('placeholder', profSelec.nombre);
-    apellido.setAttribute('placeholder', profSelec.apellido);;
-    especialidad.setAttribute('placeholder', profSelec.especialidad);
-    obrasocial.setAttribute('placeholder', profSelec.obrasocial);
-    estadodecuenta.setAttribute('placeholder', profSelec.estadodecuenta);
-    console.log(profSelec);
-    console.log(usuarioSelec);
+    } else {
+        idUser.setAttribute('placeholder', usuarioSelec.id);
+        username.setAttribute('placeholder', usuarioSelec.userName);
+        password.setAttribute('placeholder', usuarioSelec.password);
+        nombre.setAttribute('placeholder', profSelec.nombre);
+        apellido.setAttribute('placeholder', profSelec.apellido);;
+        especialidad.setAttribute('placeholder', profSelec.especialidad);
+        obrasocial.setAttribute('placeholder', profSelec.obrasocial);
+        estadodecuenta.setAttribute('placeholder', profSelec.estadodecuenta);
+        console.log(profSelec);
+        console.log(usuarioSelec);
+    }
 
 }
 
