@@ -15,311 +15,7 @@
 
 </head>
 
-<body>
-
-
-    <!-- Extra large modal profesionales
-    <!-- Extra large modal profesionales -->
-
-
-    <div class="modal fade" id="modalProfesionalesXL" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <ul class="nav nav-tabs" id="tabContent">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="navTab1" href="#infoDelProfesional"
-                                onclick="funcionNavTab1()">Información</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="navTab2" href="#historialAlquileresProfesional"
-                                onclick="funcionNavTab2()">Historial de
-                                alquileres</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="navTab3" href="#historialTicketsProfesional"
-                                onclick="funcionNavTab3()">Historial de
-                                tickets</a>
-                        </li>
-                    </ul>
-                    <h4 class="modal-title my-auto mx-5" id="exampleModalLabel">Carmen Sandiego</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="tab-content">
-                        <div class="tab-pane mx-1 my-3 active" id="infoDelProfesional">
-                            <div class="row">
-                                <div class="col-9">
-                                    <form>
-
-                                        <div class="form-group row">
-                                            <label for="nombreProfesional"
-                                                class="col-2 col-form-label text-center">Nombre</label>
-                                            <div class="col-8">
-                                                <input class="form-control" type="text" placeholder="Carmen Sandiego"
-                                                    readonly>
-                                            </div>
-                                            <div class="col-2 my-auto">
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="switchEditar">
-                                                    <label class="custom-control-label"
-                                                        for="switchEditar">Editar</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="idProfesional"
-                                                class="col-2 col-form-label text-center">ID</label>
-                                            <div class="col-8">
-                                                <input class="form-control" type="text" placeholder="0002" readonly>
-                                            </div>
-                                            <div class="col-2 my-auto">
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="switchEditar">
-                                                    <label class="custom-control-label"
-                                                        for="switchEditar">Editar</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="especialidadProfesional"
-                                                class="col-2 col-form-label text-center">Especialidad</label>
-                                            <div class="col-8">
-                                                <fieldset disabled="disabled">
-                                                    <select id="disabledSelect" class="form-control">
-                                                        <option>Espia</option>
-                                                        <option>Clinico</option>
-                                                    </select>
-                                                </fieldset>
-                                            </div>
-                                            <div class="col-2 my-auto">
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="switchEditar">
-                                                    <label class="custom-control-label"
-                                                        for="switchEditar">Editar</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="estadoProfesional"
-                                                class="col-2 col-form-label text-center">Estado</label>
-                                            <div class="col-8">
-                                                <fieldset disabled="disabled">
-                                                    <select id="disabledSelect" class="form-control">
-                                                        <option>Activo</option>
-                                                        <option>Inactivo</option>
-                                                    </select>
-                                                </fieldset>
-                                            </div>
-                                            <div class="col-2 my-auto">
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="switchEditar">
-                                                    <label class="custom-control-label"
-                                                        for="switchEditar">Editar</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="userName"
-                                                class="col-2 col-form-label text-center">Usuario</label>
-                                            <div class="col-8">
-                                                <input class="form-control" type="text" placeholder="Carmen123"
-                                                    readonly>
-                                            </div>
-                                            <div class="col-2 my-auto">
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="switchEditar">
-                                                    <label class="custom-control-label"
-                                                        for="switchEditar">Editar</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="userPass"
-                                                class="col-2 col-form-label text-center">Password</label>
-                                            <div class="col-8">
-                                                <input class="form-control" type="text" placeholder="123456" readonly>
-                                            </div>
-                                            <div class="col-2 my-auto">
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="switchEditar">
-                                                    <label class="custom-control-label"
-                                                        for="switchEditar">Editar</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="tipoCuenta"
-                                                class="col-2 col-form-label text-center">Tipo</label>
-                                            <div class="col-8">
-                                                <fieldset disabled="disabled">
-                                                    <select id="disabledSelect" class="form-control">
-                                                        <option>Profesional</option>
-                                                        <option>Administrativo</option>
-                                                    </select>
-                                                </fieldset>
-                                            </div>
-                                            <div class="col-2 my-auto">
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="switchEditar">
-                                                    <label class="custom-control-label"
-                                                        for="switchEditar">Editar</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="descripcionWeb" class="col-2 col-form-label text-center">Desc.
-                                                Web</label>
-                                            <div class="col-8">
-                                                <fieldset disabled="disabled">
-                                                    <div class="form-group">
-                                                        <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                            rows="3"></textarea>
-                                                    </div>
-                                                </fieldset>
-                                            </div>
-                                            <div class="col-2 my-auto">
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="switchEditar">
-                                                    <label class="custom-control-label"
-                                                        for="switchEditar">Editar</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </form>
-                                </div>
-                                <div class="col-3">
-                                    <img src="img/csd.jpg" width="200px" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane mx-1 my-3" id="historialAlquileresProfesional">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="table-responsive">
-                                        <table class="table table-striped table-sm">
-                                            <thead>
-                                                <tr>
-                                                    <th>IdConsultorio</th>
-                                                    <th>Fecha alquiler</th>
-                                                    <th>Fecha fin alquiler</th>
-                                                    <th>Addons</th>
-                                                    <th>Estado pago</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>0101</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>+maquina1 +maquina2 +maquina3</td>
-                                                    <td>pago</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>0101</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>+maquina1 +maquina2 +maquina3</td>
-                                                    <td>pago</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>0101</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>+maquina1 +maquina2 +maquina3</td>
-                                                    <td>pago</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>0101</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>+maquina1 +maquina2 +maquina3</td>
-                                                    <td>pago</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>0101</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>+maquina1 +maquina2 +maquina3</td>
-                                                    <td>pago</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>0101</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>05/03/2019 t1</td>
-                                                    <td>+maquina1 +maquina2 +maquina3</td>
-                                                    <td>pago</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane mx-1 my-3" id="historialTicketsProfesional">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="table-responsive">
-                                        <table class="table table-striped table-sm">
-                                            <thead>
-                                                <tr>
-                                                    <th>Nro Ticket</th>
-                                                    <th>IdConsultorio</th>
-                                                    <th>Fecha</th>
-                                                    <th>Asunto</th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>00000001</td>
-                                                    <td>0101</td>
-                                                    <td>05/03/2019 15:02</td>
-                                                    <td>es un excelente lugar</td>
-                                                    <td>...</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>00000001</td>
-                                                    <td>0101</td>
-                                                    <td>05/03/2019 15:02</td>
-                                                    <td>es un excelente lugar</td>
-                                                    <td>...</td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
+<body class="d-flex flex-column">
 
 
     <!--navegacion-->
@@ -361,6 +57,9 @@
                     <li class="nav-item active ml-auto">
                         <a class="nav-link" href="panel.html">Panel&nbsp;&nbsp;<i class="fas fa-columns"></i></a>
                     </li>
+                    <li class="nav-item active ml-auto">
+                        <a class="nav-link" href="panel2.html">Panel2&nbsp;&nbsp;<i class="fas fa-columns"></i></a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -377,41 +76,21 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column pt-2">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" id="linkTicketsPublicos"
-                                onclick="funcionLinkTicketsPublicos()">
+                            <a class="nav-link" href="#" id="linkMiInformacion" onclick="funcionLinkMiInformacion()">
                                 <span data-feather="home"></span>
-                                Tickets Publicos
+                                Mi informacion
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" id="linkTicketsPrivados"
-                                onclick="funcionLinkTicketsPrivados()">
+                            <a class="nav-link" href="#" id="linkMisTickets" onclick="funcionLinkMisTickets()">
                                 <span data-feather="file"></span>
-                                Tickets Privados
+                                Mis Tickets
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" id="linkProfesionales" onclick="funcionLinkProfesionales()">
-                                <span data-feather="shopping-cart"></span>
-                                Profesionales
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="linkConsultorios" onclick="funcionLinkConsultorios()">
-                                <span data-feather="users"></span>
-                                Consultorios
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="linkAlquileres" onclick="funcionLinkAlquileres()">
+                            <a class="nav-link" href="#" id="linkMisAlquileres" onclick="funcionLinkMisAlquileres()">
                                 <span data-feather="bar-chart-2"></span>
-                                Alquileres
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="linkDeudas" onclick="funcionLinkDeudas()">
-                                <span data-feather="layers"></span>
-                                Deudas
+                                Mis Alquileres
                             </a>
                         </li>
                     </ul>
@@ -421,450 +100,149 @@
     </div>
 
     <!--zona principal barra superior-->
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <main role="main" class="col-10 ml-auto px-4">
         <div class="row">
-            <div class="pt-3 pb-2 mb-3 col-9 border-bottom">
-                <h3 class="mx-auto align-middle">Panel de Control</h3>
-            </div>
-            <div class="pt-3 pb-2 mb-3 col-3 border-bottom">
-                <button type="button" id="botonSumarProf" class="btn btn-outline-primary d-none">+ Sumar
-                    profesional</button>
+            <div class="pt-3 pb-2 mb-3 col-12 border-bottom">
+                <h3 id="Administrativo" class="mx-auto align-middle">Panel de Control</h3>
             </div>
         </div>
+        <!--seccion Mi informacion-->
+        <!--seccion Mi informacion-->
+
+        <section id="seccionMiInformacion" class="d-none">
+            <div class="row mb-2">
+                <h4>Mi información</h4>
+            </div>
+            <div class="row my-4">
+                <div class="col-9">
+                    <form>
+                        <div class="form-group row">
+                            <label for="idProfesional" class="col-2 col-form-label text-center">ID</label>
+                            <div class="col-9">
+                                <input id="disModal1" class="form-control" type="text" placeholder="" readonly>
+                                <!-- en placeholder ID -->
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="nombreProfesional" class="col-2 col-form-label text-center">Nombre</label>
+                            <div class="col-9">
+                                <input id="disModal2" class="form-control" type="text" placeholder="" readonly>
+                                <!-- en placeholder NOMBRE -->
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="nombreProfesional" class="col-2 col-form-label text-center">Apellido</label>
+                            <div class="col-9">
+                                <input id="disModal3" class="form-control" type="text" placeholder="" readonly>
+                                <!-- en placeholder APELLIDO -->
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="especialidadProfesional"
+                                class="col-2 col-form-label text-center">Especialidad</label>
+                            <div class="col-9">
+                                <fieldset id="disModal4" disabled="disabled">
+                                    <select id="especialidad" class="form-control">
+
+                                        <option>Clinico</option>
+                                        <option>Psicologo</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="estadoProfesional" class="col-2 col-form-label text-center">Estado</label>
+                            <div class="col-9">
+                                <fieldset id="disModal5" disabled="disabled">
+                                    <select id="disabledSelect" class="form-control">
+                                        <option>Activo</option>
+                                        <option>Inactivo</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="userName" class="col-2 col-form-label text-center">Usuario</label>
+                            <div class="col-9">
+                                <input id="disModal6" class="form-control" type="text" placeholder="" readonly>
+                                <!-- en placeholder USER -->
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="userPass" class="col-2 col-form-label text-center">Password</label>
+                            <div class="col-9">
+                                <input id="disModal7" class="form-control" type="text" placeholder="" readonly>
+                                <!-- en placeholder PASSWORD -->
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="obraSoc" class="col-2 col-form-label text-center">Obra
+                                Social</label>
+                            <div class="col-9">
+                                <fieldset id="disModal8" disabled="disabled">
+
+                                    <select id="obraSocial" class="form-control">
+                                        <option>OSDE</option>
+                                        <option>Galeno</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-3 d-flex flex-column">
+                    <img src="img/defaultUser.jpg" width="200px" height="200px" class=" align-self-center"> <!-- aca FOTO -->
+                    <br>
+                    <br>
+                    <button type="button" class="btn btn-danger btn-lg">Solicitar Cambios</button>
+                </div>
+                
+            </div>
+        </section>
 
         <!--seccion tickets Publicos-->
         <!--seccion tickets Publicos-->
 
 
-        <section id="seccionTicketsPublicos" class="d-none">
-            <h4 class="my-2">Tickets publicos</h4>
-            <div class="table-responsive">
-                <table class="table table-striped table-sm">
-                    <thead>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>nroTicket</th>
-                            <th>nombre</th>
-                            <th>asunto</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>20/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>dolor</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>20/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>adipiscing</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
-                        <tr>
-                            <td>21/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>odio</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
-                        <tr>
-                            <td>20/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>adipiscing</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
-                        <tr>
-                            <td>21/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>odio</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
-                    </tbody>
-                </table>
+        <section id="seccionMisTickets" class="d-none">
+            <div class="row mb-2">
+                <h4>Mis Tickets</h4>
             </div>
-        </section>
-
-
-        <!--seccion tickets Privados-->
-        <!--seccion tickets Privados-->
-
-
-        <section id="seccionTicketsPrivados" class="d-none">
-            <h4 class="my-2">Tickets privados</h4>
-            <div class="table-responsive">
-                <table class="table table-striped table-sm">
-                    <thead>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>nroTicket</th>
-                            <th>nombre</th>
-                            <th>asunto</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>20/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>dolor</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
-                        <tr>
-                            <td>20/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>adipiscing</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
-                        <tr>
-                            <td>21/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>odio</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
-                        <tr>
-                            <td>20/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>adipiscing</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
-                        <tr>
-                            <td>21/02/2019</td>
-                            <td>0101</td>
-                            <td>asdfasdf</td>
-                            <td>odio</td>
-                            <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-
-        <!--seccion profesionales-->
-        <!--seccion profesionales-->
-
-
-        <section id="seccionProfesionales" class="d-none">
             <div class="row">
-                <div class="col-md-3">
-                    <h4>Filtros</h4>
-                </div>
-                <div class="col-md-9">
-                    <h4>Lista de profesionales</h4>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-3">
-
-                    <h5 class="border-bottom mt-3">Estado</h5>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                            value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">
-                            Activos
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                            value="option2">
-                        <label class="form-check-label" for="exampleRadios2">
-                            Inactivos
-                        </label>
-                    </div>
-
-                    <h5 class="border-bottom mt-3">Otra opcion</h5>
-
-                    <select class="form-control form-control-sm">
-                        <option>Small select 1</option>
-                        <option>Small select 2</option>
-                        <option>Small select 3</option>
-                        <option>Small select 4</option>
-                        <option>Small select 5</option>
-                    </select>
-
-                    <h5 class="border-bottom mt-3">Especialidad</h5>
-
-                    <div class="mb-5">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                Especialidad 1
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                            <label class="form-check-label" for="defaultCheck2">
-                                Especialidad 2
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                            <label class="form-check-label" for="defaultCheck3">
-                                Especialidad 3
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                            <label class="form-check-label" for="defaultCheck4">
-                                Especialidad 4
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
-                            <label class="form-check-label" for="defaultCheck5">
-                                Especialidad 5
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <div class="table-responsive">
-                        <table class="table table-striped table-sm">
-                            <thead>
-                                <tr>
-                                    <th>IdMedico</th>
-                                    <th>nombreMedico</th>
-                                    <th>especialidad</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>0001</td>
-                                    <td>roberto</td>
-                                    <td>elmaestro</td>
-                                    <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0"
-                                            data-toggle="modal" data-target="#modalProfesionalesXL">ver</button>
-                                </tr>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--seccion consultorios-->
-        <!--seccion consultorios-->
-
-
-        <section id="seccionConsultorios" class="d-none">
-            <div class="row">
-                <div class="col-md-3">
-                    <h4>Filtros</h4>
-                </div>
-                <div class="col-md-9">
-                    <h4>Lista de profesionales</h4>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-3">
-
-                    <h5 class="border-bottom mt-3">Estado</h5>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                            value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">
-                            Activos
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                            value="option2">
-                        <label class="form-check-label" for="exampleRadios2">
-                            Inactivos
-                        </label>
-                    </div>
-
-                    <h5 class="border-bottom mt-3">Otra opcion</h5>
-
-                    <select class="form-control form-control-sm">
-                        <option>Small select 1</option>
-                        <option>Small select 2</option>
-                        <option>Small select 3</option>
-                        <option>Small select 4</option>
-                        <option>Small select 5</option>
-                    </select>
-
-                    <h5 class="border-bottom mt-3">Especialidad</h5>
-                    <div class="mb-5">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                Especialidad 1
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                            <label class="form-check-label" for="defaultCheck2">
-                                Especialidad 2
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                            <label class="form-check-label" for="defaultCheck3">
-                                Especialidad 3
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                            <label class="form-check-label" for="defaultCheck4">
-                                Especialidad 4
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
-                            <label class="form-check-label" for="defaultCheck5">
-                                Especialidad 5
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <div class="table-responsive">
-                        <table class="table table-striped table-sm">
-                            <thead>
-                                <tr>
-                                    <th>IdMedico</th>
-                                    <th>nombreMedico</th>
-                                    <th>especialidad</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
-                                <tr>
-                                    <td>0101</td>
-                                    <td>pepe</td>
-                                    <td>dientitox</td>
-                                    <td> <button type="button"
-                                            class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!--seccion alquileres-->
-        <!--seccion alquileres-->
-
-
-        <section id="seccionAlquileres" class="d-none">
-            <h4>Alquileres venciendo</h4>
-            <div class="col-md-12 px-0">
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
                         <thead>
                             <tr>
-                                <th>IdMedico</th>
-                                <th>nombreMedico</th>
-                                <th>especialidad</th>
+                                <th>Fecha</th>
+                                <th>nroTicket</th>
+                                <th>nombre</th>
+                                <th>asunto</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
+                                <td>20/02/2019</td>
                                 <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
+                                <td>asdfasdf</td>
+                                <td>dolor</td>
                                 <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
-                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </tr>
-                            <tr>
-                                <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
-                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </tr>
-                            <tr>
-                                <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
-                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </tr>
-                            <tr>
-                                <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
-                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -872,13 +250,15 @@
         </section>
 
 
-        <!--seccion deudas-->
-        <!--seccion deudas-->
+        <!--seccion mis alquileres-->
+        <!--seccion mis alquileres-->
 
 
-        <section id="seccionDeudas" class="d-none">
-            <h4>Deudas</h4>
-            <div class="col-md-12 px-0">
+        <section id="seccionMisAlquileres" class="d-none">
+            <div class="row mb-2">
+                <h4>Mis Alquileres</h4>
+            </div>
+            <div class="row">
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
                         <thead>
@@ -896,30 +276,7 @@
                                 <td>dientitox</td>
                                 <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
                             </tr>
-                            <tr>
-                                <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
-                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </tr>
-                            <tr>
-                                <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
-                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </tr>
-                            <tr>
-                                <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
-                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </tr>
-                            <tr>
-                                <td>0101</td>
-                                <td>pepe</td>
-                                <td>dientitox</td>
-                                <td> <button type="button" class="btn btn-outline-secondary btn-sm py-0">ver</button>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -933,12 +290,9 @@
     <!--webfooter-->
 
 
-    <section class="bg-dark text-white">
-        <!--fondo verde solo para testear el ancho del footer claramente-->
-        <footer class="container mt-auto py-2 align-middle text-right">
-            copyright 2019 Roberto coworking - dir - tel
-        </footer>
-    </section>
+    <footer class="bg-dark text-white footer mt-auto py-2 align-middle text-right px-5">
+        copyright 2019 Roberto coworking - Dirección: Av. Siempreviva 742 - Telefono: 0-800-Roberto
+    </footer>
 
 
     <!--scripts-->
@@ -954,10 +308,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="scriptsPanel.js"></script>
-   
-
-
+    <script src="scriptsPanel2.js"></script>
 </body>
 
 </html>
