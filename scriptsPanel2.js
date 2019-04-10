@@ -1,6 +1,5 @@
 // d-none en secciones
 // active en links
-// confirmar si se puede refactorizar
 
 function linksNonActiveAll() {
     document.getElementById("linkMiInformacion").classList.remove('active');
