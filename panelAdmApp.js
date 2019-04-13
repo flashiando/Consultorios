@@ -64,6 +64,15 @@ var Admins = [
 var adminLogueado = undefined; // inicioS() guardara aqui el objeto que representa al Admin logueado.
 
 var inicioS = function () {
+    
+    /*fetch('http://127.0.0.1:8080/obtenerUsuarios')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (myJson) {
+            console.log(myJson); 
+        });*/
+
     adminLogueado = Admins.find(function (element) {
         return element.id == localStorage.getItem('id');
     });
@@ -91,7 +100,7 @@ function addRow(tableID, profID, nombreProf, especialidad) {
     // Añade un nodo de texto a la celda
     var newText1 = document.createTextNode(profID);
     var newText2 = document.createTextNode(nombreProf);
-    var newText3 = document.createTextNode(especialidad)
+    var newText3 = document.createTextNode(especialidad);
 
 
     //Añade y configura el boton Ver    
@@ -103,12 +112,22 @@ function addRow(tableID, profID, nombreProf, especialidad) {
     var x = 'mostrarEnModal(' + profID + ')'
     botonVer.setAttribute('onclick', x);
 
+    //Añade y configura el boton Editar    
+    var botonEditar = document.createElement("button");
+    botonEditar.innerHTML = 'Editar';
+    botonEditar.setAttribute('class', "btn btn-outline-secondary btn-sm py-0");
+    botonEditar.setAttribute('data-toggle', "modal");
+    botonEditar.setAttribute('data-target', '#modalProfesionalesXL');
+    var y = 'mostrarEnModal(' + profID + ');funcionBotonProfesionales()'
+    botonEditar.setAttribute('onclick', y);
+
 
     //Inserta en el html los objetos creados.
     newCell1.appendChild(newText1);
     newCell2.appendChild(newText2);
     newCell3.appendChild(newText3);
     newCell4.appendChild(botonVer);
+    newCell4.appendChild(botonEditar);
 
 }
 
@@ -163,13 +182,13 @@ var mostrarEnModal = function (idProf) {
     //Parte 2 -Carga los datos correspondientes en el html 
     if (idProf == 'vacio') {
         idUser.setAttribute('placeholder', '');
-        username.setAttribute('placeholder','');
-        password.setAttribute('placeholder','');
-        nombre.setAttribute('placeholder','');
-        apellido.setAttribute('placeholder','');;
+        username.setAttribute('placeholder', '');
+        password.setAttribute('placeholder', '');
+        nombre.setAttribute('placeholder', '');
+        apellido.setAttribute('placeholder', '');;
         especialidad.setAttribute('placeholder', '');
         obrasocial.setAttribute('placeholder', '');
-        estadodecuenta.setAttribute('placeholder','');
+        estadodecuenta.setAttribute('placeholder', '');
 
     } else {
         idUser.setAttribute('placeholder', usuarioSelec.id);
